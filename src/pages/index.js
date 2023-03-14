@@ -17,9 +17,9 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         
-        <div className={styles.center}>
+        <div>
           <title>Loading</title>
-          <div className={styles.thirteen}>
+          <div>
             <title> in a few</title>
           </div>
         </div>
