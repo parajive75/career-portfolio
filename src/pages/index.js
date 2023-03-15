@@ -1,10 +1,10 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Text from 'next'
-import { Inter } from 'next/font/google'
-import styles from '@component/styles/Home.module.css'
+import Head from "next/head";
+import { Box, Heading, Text, Button, CircularProgress } from "@chakra-ui/react";
 
-const inter = Inter({ subsets: ['latin'] })
+import { Inter } from "next/font/google";
+import styles from "@component/styles/Home.module.css";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -16,14 +16,34 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        
-        <div>
-          <title>Loading</title>
-          <div>
-            <title> in a few</title>
-          </div>
-        </div>
+        <Box textAlign="center" py={10} px={6}>
+          <Heading
+            display="inline-block"
+            as="h2"
+            size="2xl"
+            bgGradient="linear(to-r, teal.400, teal.600)"
+            backgroundClip="text"
+          >
+            Hello
+          </Heading>
+          <Text color={"gray.500"} mb={6} mt={6}>
+            The portfolio webpage is in maintenance
+          </Text>
+          <Box p={6}>
+           
+            <CircularProgress isIndeterminate color="green.300" />
+          </Box>
+
+          <Button
+            colorScheme="teal"
+            bgGradient="linear(to-r, teal.400, teal.500, teal.600)"
+            color="white"
+            variant="solid"
+          >
+            Head to Blog
+          </Button>
+        </Box>
       </main>
     </>
-  )
+  );
 }
